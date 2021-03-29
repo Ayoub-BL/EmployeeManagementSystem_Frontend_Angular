@@ -1,0 +1,31 @@
+<h2 class="text">Employee List</h2>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>
+                {{employee.firstName}}
+            </td>
+            <td>
+                {{employee.lastName}}
+            </td>
+            <td>
+                {{employee.emailId}}
+            </td>
+            <td>
+                <button class="btn btn-warning" (click)="open(this.employee.id)">view</button>
+                <button (click)="updateEmployee(this.employee.id)" class="btn btn-info" style="margin-left:10px">update</button>
+                <button (click)="deleteEmployee(this.employee.id)" class="btn btn-danger" style="margin-left:10px">delete
+        </button>
+                <!--[disabled]="(employee.firstName === 'CET_firstName') " bind disable proproty to whether the first name of the employee = a value-->
+            </td>
+        </tr>
+    </tbody>
+</table>

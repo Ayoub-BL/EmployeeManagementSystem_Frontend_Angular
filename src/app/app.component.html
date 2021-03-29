@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="navbar-item">
+            <a routerLink="employees" routerLinkActive="active" class="nav-link">Employee list</a>
+        </li>
+        <li class="navbar-item">
+            <a routerLink="create-employee" routerLinkActive="active" class="nav-link">Add employee</a>
+        </li>
+
+    </ul>
+
+</nav>
+<h1 class="text-center">{{title}}</h1>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+    <div class="navbar-fixed-bottom">
+        <div class="container">
+            <span>Springboot - Angular webapp </span>
+        </div>
+    </div>
+</footer>
